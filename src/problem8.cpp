@@ -26,6 +26,25 @@ int dy[] = {0,0,1,-1};
 
 
 int main(){
+  int N;
+  cin >> N;
+  ll A[N], B[N];
+  rep(i,N) cin >> A[i] >> B[i];
+  
+
+  ll ans = 30000000000;
+  rep(i,N) {
+	rep(j,N) {
+	  ll st = A[i];
+	  ll gl = B[j];
+	  ll tmp = 0;
+	  rep(k,N) {
+		tmp += abs(st - A[k]) + abs(gl - B[k]) + B[k] - A[k];
+	  }
+	  ans = min(ans,tmp);
+	}
+  }
+  cout << ans << endl;
   
   return 0;
 }

@@ -26,7 +26,31 @@ int dy[] = {0,0,1,-1};
 
 
 int main(){
+  int N;
+  string S;
+  cin >> N >> S;
+  int ans = 0;
+  for(char a = '0'; a <= '9'; a++) {
+	for(char b = '0'; b <= '9'; b++) {
+	  for(char c = '0'; c <= '9'; c++) {
+		string s;
+		bool f1 = false;
+		bool f2 = false;
+		bool f3 = false;
+		rep(i,N) {
+		  if(S[i] == c && f2) f3 = true;
+		  if(S[i] == b && f1) f2 = true;
+		  if(S[i] == a) f1 = true;
+		}
+		if(f3) {
+		  //		  printf("%c%c%c\n",a,b,c);
+		  ans += 1;
+		}
 
+	  }	
+	}	
+  }
+  cout << ans << endl;
   return 0;
 }
 
