@@ -25,8 +25,58 @@ int dx[] = {1,-1,0,0};
 int dy[] = {0,0,1,-1};
 
 
-int main(){
+bool re[15][15];
 
-  return 0;
+int main(){
+    int N,M;
+    cin >> N >> M;
+    rep(i,M) {
+	int x,y;
+	cin >> x >> y;
+	x--,y--;
+	re[x][y] = true;
+	re[y][x] = true;
+    }
+    int ans = 0;
+    
+    for(int bit=0; bit < (1 << N); bit++) {
+	vector<bool> frd(N,false);
+	int num = 0;
+	rep(i,N) {
+	    if(bit & (1 << i)){
+		frd[i] = true;
+		num++;
+	    }
+	    
+	}
+	
+	// for(auto itr : frd) {
+	//     cout << itr;
+	// }
+	// cout << endl;
+	    
+	bool f = true;
+	rep(i,N) {
+	    rep(j,N) {
+		if(i == j) continue;
+		if(frd[i] && frd[j]) {
+		    if(re[i][j] == false) f = false;
+		}
+	    }
+	}
+//	cout << num << endl;
+	if(f) ans = max(ans,num);
+    }
+    cout << ans << endl;
+
+    // rep(i,N) {
+    // 	rep(j,N) {
+    // 	    cout << re[i][j];
+    // 	}
+    // 	cout << endl;
+    // }
+
+    
+    return 0;
 }
 
