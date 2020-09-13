@@ -21,7 +21,7 @@ diffは主観的難易度
 |**10**|A |　[ALDS_5_A - 総当たり](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_5_A&lang=ja)|
 |**11**|A |　[AtCoder Beginner Contest 128 C - Switches](https://atcoder.jp/contests/abc128/tasks/abc128_c)|
 |**12**|A |　[AtCoder Beginner Contest 002 D - 派閥](https://atcoder.jp/contests/abc002/tasks/abc002_4)|
-|**13**| |　[JOI 2008 予選 5 - おせんべい](https://atcoder.jp/contests/joi2008yo/tasks/joi2008yo_e)|
+|**13**|A |　[JOI 2008 予選 5 - おせんべい](https://atcoder.jp/contests/joi2008yo/tasks/joi2008yo_e)|
 |**14**| |　[Square869120Contest #4 B - Buildings are Colorful!](https://atcoder.jp/contests/s8pc-4/tasks/s8pc_4_b)|
 |**15**| |　[AtCoder Beginner Contest 145 C - Average Length](https://atcoder.jp/contests/abc145/tasks/abc145_c)|
 |**16**| |　[AtCoder Beginner Contest 150 C - Count Order](https://atcoder.jp/contests/abc150/tasks/abc150_c)|
@@ -31,7 +31,7 @@ diffは主観的難易度
 |**20**| |　[AtCoder Beginner Contest 077 C - Snuke Festival](https://atcoder.jp/contests/abc077/tasks/arc084_a)|
 |**21**| |　[AtCoder Beginner Contest 023 D - 射撃王](https://atcoder.jp/contests/abc023/tasks/abc023_d)|
 |**22**| |　[AtCoder Regular Contest 054 B - ムーアの法則](https://atcoder.jp/contests/arc054/tasks/arc054_b)|
-|**23**| |　[JOI 2008 本選 3 - ダーツ](https://atcoder.jp/contests/joi2008ho/tasks/joi2008ho_c)|
+|**23**|C |　[JOI 2008 本選 3 - ダーツ](https://atcoder.jp/contests/joi2008ho/tasks/joi2008ho_c)|
 |**24**| |　[ALDS_11_B - 深さ優先探索](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_11_B)|
 |**25**| |　[AOJ 1160 - 島はいくつある？](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1160&lang=jp)|
 |**26**| |　[AtCoder Beginner Contest 138 D - Ki](https://atcoder.jp/contests/abc138/tasks/abc138_d)|
