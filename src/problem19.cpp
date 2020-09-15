@@ -26,7 +26,31 @@ int dy[] = {0,0,1,-1};
 
 
 int main(){
+    ll d;
+    int n;
+    int m;
+    cin >> d >> n >> m;
+    ll dist[n+1];
+    rep(i,n-1) cin >> dist[i];
+    dist[n-1] = 0;
+    dist[n] = d;
+    sort(dist,dist+n);
+    
+    ll ans = 0;
+//      vector<P> K;
+    rep(i,m) {
+	int k;
+	cin >> k;
+	ll pre = *(lower_bound(dist,dist+1+n,k)-1);
+	ll nxt = *lower_bound(dist,dist+1+n,k);
+	ans += min(abs(pre-k),abs(nxt-k));
+//	K.push_back(make_pair(pre,nxt));
+    }
+    cout << ans << endl;
 
-  return 0;
+//    for(auto itr : K) cout << itr.first << " " << itr.second << endl;;
+   
+    
+    return 0;
 }
 

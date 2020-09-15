@@ -26,7 +26,40 @@ int dy[] = {0,0,1,-1};
 
 
 int main(){
+    int N,K;
+    cin >> N >> K;
+    ll a[N];
+    rep(i,N) cin >> a[i];
 
-  return 0;
+    ll ans = 1000000000000;
+    for(int bit=0; bit < (1<<N); bit++) {
+	vector<bool> ch;
+	int num = 0;
+	ll pre = 0;
+	ll tmp = 0;
+	rep(i,N) {
+	    if(bit & (1<<i)) {
+		ch.push_back(true);
+		num++;
+	    }
+	    else ch.push_back(false);
+       	}
+	if(num<K) continue;
+
+	rep(i,N) {
+	    if(ch[i]) {
+		if(pre >= a[i]) {
+		    pre++;
+		    tmp += pre - a[i];
+		}
+	    }
+	    pre = max(pre,a[i]);
+	}
+	ans = min(ans,tmp);
+    }
+    cout << ans << endl;
+					 
+    
+    return 0;
 }
 

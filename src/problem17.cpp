@@ -25,8 +25,46 @@ int dx[] = {1,-1,0,0};
 int dy[] = {0,0,1,-1};
 
 
-int main(){
+vector<vector<bool>> f(9,vector<bool>(9,true));
 
-  return 0;
+void draw(int x, int y, int vx, int vy) {
+    if(0 <= x && x < 9 && 0<= y && y < 9) {
+	f[y][x] = false;
+	draw(x+vx,y+vy,vx,vy);
+    }
+}
+
+
+
+int main(){
+    int n;
+    cin >> n;
+    rep(i,n) {
+	int x,y;
+	cin >> x >> y;
+	rep(i,4) {
+	    rep(j,4) {
+		if(dx[i] == 0 && dy[j] == 0) continue;
+		draw(x,y,dx[i],dy[j]);
+	    }
+	}
+	f[y][x] = true;
+    }
+
+    
+
+
+
+    
+
+    rep(i,9) {
+	rep(j,9) {
+	    if(f[i][j]) cout << 'Q';
+	    else cout << '.';
+	}
+	cout << endl;
+    }
+    
+    return 0;
 }
 

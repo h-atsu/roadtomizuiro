@@ -26,7 +26,20 @@ int dy[] = {0,0,1,-1};
 
 
 int main(){
-
-  return 0;
+    int n;
+    int ans = 0;
+    cin >> n;
+    vector<int> S(n);	
+    rep(i,n) cin >> S[i];
+    int q;
+    cin >> q;
+    rep(i,q) {
+	int t;
+	cin >> t;
+	if(t == *lower_bound(S.begin(),S.end(),t)) ans++;
+    }
+    cout << ans << endl;
+    
+    return 0;
 }
 

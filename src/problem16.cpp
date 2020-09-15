@@ -26,7 +26,40 @@ int dy[] = {0,0,1,-1};
 
 
 int main(){
+    int N;
+    cin >> N;
+    int P[N];
+    int Q[N];
+    int ord[N];
+    rep(i,N) {
+	cin >> P[i];
+	ord[i] = i+1;
+    }
+    rep(i,N) {
+	cin >> Q[i];
+    }
 
-  return 0;
+    int a,b;
+    int cnt = 0;
+    do {
+	bool fa = true;
+	bool fb = true;
+	
+	rep(i,N) {
+	    if(ord[i] != P[i]) fa = false;
+	    if(ord[i] != Q[i]) fb = false;
+	}
+	if(fa) a = cnt;
+	if(fb) b = cnt;
+	cnt++;
+
+	// for(auto itr : ord) cout << itr ;
+	// cout << endl;
+	// cout << cnt << endl;
+    }while(next_permutation(ord,ord+N));
+
+    cout << abs(a-b) << endl;
+    
+    return 0;
 }
 
