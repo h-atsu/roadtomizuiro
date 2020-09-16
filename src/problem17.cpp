@@ -25,46 +25,143 @@ int dx[] = {1,-1,0,0};
 int dy[] = {0,0,1,-1};
 
 
-vector<vector<bool>> f(9,vector<bool>(9,true));
 
-void draw(int x, int y, int vx, int vy) {
-    if(0 <= x && x < 9 && 0<= y && y < 9) {
-	f[y][x] = false;
-	draw(x+vx,y+vy,vx,vy);
-    }
+
+#define N 8
+#define FREE -1
+#define NOT_FREE 1
+
+int row[N], col[N], dpos[2*N-1], dneg[2*N-1];
+int counter;
+bool ng[N];
+vector<P> cor;
+
+void initialize(){
+    for ( int i = 0; i < N; i++ ){ row[i] = FREE, col[i] = FREE; }
+    for ( int i = 0; i < 2*N - 1; i++ ) { dpos[i] = FREE; dneg[i] = FREE; }
 }
 
+void printBoard(){
+    for ( int i = 0; i < N; i++ ){
+        for ( int j = 0; j < N; j++ ){
+            cout << (( row[i] == j ) ? "Q" : ".");
+        }
+        cout << endl;
+    }
+//    cout << endl;
+}
 
+void recursive( int i ){
+    if ( i == N ){ // SUCCESS
+	for(auto itr : cor) {
+	    row[itr.second] = itr.first;
+	}
+        printBoard();
+	return;
+    }
+    if(ng[i]) recursive(i+1);
+    
+    for ( int j = 0; j < N; j++ ){
+        // if (i, j) is attacked by other queens, continue
+        if ( col[j] == NOT_FREE || dpos[i+j] == NOT_FREE ||
+	     dneg[i-j+N-1] == NOT_FREE ) continue;
+	// put a queen on (i, j)
+        row[i] = j; col[j] = dpos[i+j] = dneg[i-j+N-1] = NOT_FREE;
+        // try next row
+        recursive( i + 1 );
+        // remove the queen from (i, j)
+        row[i] = col[j] = dpos[i+j] = dneg[i-j+N-1] = FREE;
+    }
+    
+    // FAIL
+}
 
 int main(){
+    initialize();
     int n;
     cin >> n;
     rep(i,n) {
 	int x,y;
-	cin >> x >> y;
-	rep(i,4) {
-	    rep(j,4) {
-		if(dx[i] == 0 && dy[j] == 0) continue;
-		draw(x,y,dx[i],dy[j]);
-	    }
-	}
-	f[y][x] = true;
+	cin >> y >> x;
+	cor.push_back(make_pair(x,y));
+	row[y] = x;
+	col[x] = dpos[x+y] = dneg[y-x+N-1] = NOT_FREE;
+	ng[y] = true;
     }
-
-    
-
-
-
-    
-
-    rep(i,9) {
-	rep(j,9) {
-	    if(f[i][j]) cout << 'Q';
-	    else cout << '.';
-	}
-	cout << endl;
-    }
-    
-    return 0;
+    recursive( 0 );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// #define N 8
+// #define FREE -1
+// #define NOT_FREE 1
+// vector<vector<bool>> f(9,vector<bool>(9,true));
+// int row[N], col[N], dpos[2*N-1], dneg[2*N-1];
+
+// void dfs(int i) {
+//     if(i == N) return;
+//     rep(j,N) {
+// 	if(col[j] == NOT_FREE || dpos[i+j] == NOT_FREE || dneg[i-j+N-1] == NOT_FREE) continue;
+// 	row[i] = j;  //とりあえずi行目のj列にクイーンを配置する
+// 	col[j] = dpos[i+j] = dneg[i-j+N-1] = NOT_FREE;
+	
+// 	dfs(i+1);
+// 	//失敗したのでクイーンを取り除く
+// 	row[i] = col[j] = dpos[i+j] = dneg[i-j+N-1] = FREE;
+//     }
+//     //失敗したら到達するライン
+// }
+
+// void init() {
+//     rep(i,N) row[i] = FREE, col[i] = FREE;
+//     rep(i,N*2-1) dpos[i] = dneg[i] = FREE;
+// }
+
+
+// int main(){
+//     init();
+//     int n;
+//     cin >> n;
+//     rep(i,n) {
+// 	int x,y;
+// 	cin >> y >> x;
+// 	row[y] = x;
+// 	col[x] = dpos[x+y] = dneg[y-x+N-1] = NOT_FREE;
+//     }
+
+
+//     dfs(0);
+
+
+    
+
+//     rep(i,8) {
+// 	rep(j,8) {
+// 	    cout << ((row[i] == j) ? "Q" : ".");
+// 	}
+// 	cout << endl;
+//     }
+    
+//     return 0;
+// }
 

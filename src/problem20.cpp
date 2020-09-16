@@ -26,7 +26,28 @@ int dy[] = {0,0,1,-1};
 
 
 int main(){
+    int N;
+    cin >> N;
+    vector<int> A(N);
+    vector<int> B(N);
+    vector<int> C(N);
+    rep(i,N) cin >> A[i]; sort(A.begin(),A.end());
+    rep(i,N) cin >> B[i]; 
+    rep(i,N) cin >> C[i]; sort(C.begin(),C.end());
+    
 
-  return 0;
+    ll ans = 0;
+    
+    rep(i,N) {
+	
+	int a = lower_bound(A.begin(),A.end(),B[i]) - A.begin();
+	int c = N - (upper_bound(C.begin(),C.end(),B[i]) - C.begin());
+	ans += a*c;
+//	cout << a << " " << c << endl;	
+    }
+    cout << ans << endl;
+
+    
+    return 0;
 }
 
