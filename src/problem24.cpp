@@ -25,7 +25,49 @@ int dx[] = {1,-1,0,0};
 int dy[] = {0,0,1,-1};
 
 
+int n = 100;
+vector<vector<int>> G(n);
+vector<P> ts(n);
+int ord = 1;
+
+void dfs(int nord) {
+    if(ts[nord].first == 0) {
+	ts[nord].first = ord++;
+    }
+    else return;
+
+    for(auto itr : G[nord]) {
+	dfs(itr);
+    }
+
+    ts[nord].second = ord++;
+}
+
+
 int main(){
+    cin >> n;
+    rep(i,n) {
+	int vn;
+	int d;
+	cin >> vn;
+	cin >> d;
+	vn--;
+	rep(j,d) {
+	    int x;
+	    cin >> x;
+	    x--;
+	    G[vn].push_back(x);
+	}
+    }
+    
+    rep(i,n) dfs(i);
+
+
+
+    rep(i,n) {
+	cout << i + 1 << " " << ts[i].first << " " << ts[i].second << endl;
+    }
+    
     
     return 0;
 }

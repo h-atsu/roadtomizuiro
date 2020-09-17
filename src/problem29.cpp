@@ -25,8 +25,47 @@ int dx[] = {1,-1,0,0};
 int dy[] = {0,0,1,-1};
 
 
-int main(){
+vector<string> c(50);
+vector<vector<int>> cost(50,vector<int>(50));
 
-  return 0;
+int main(){
+    int R,C;
+    int sy,sx,gy,gx;
+    cin >> R >> C;
+    cin >> sy >> sx >> gy >> gx;
+    sy--;sx--;gy--;gx--;
+    c[sy][sx] = '.';
+    rep(i,R) {
+	string s;
+	cin >> s;
+	c[i] = s;
+    }
+
+    queue<P> q;
+    q.push(make_pair(sy,sx));
+
+    while(!q.empty()) {
+	int y = q.front().first;
+	int x = q.front().second;
+	q.pop();
+	rep(i,4) {
+	    int ny = y + dy[i];
+	    int nx = x + dx[i];
+	    if(ny < 0 || ny > R || nx < 0 || nx > C || c[ny][nx] == '#' || cost[ny][nx] != 0) continue;
+	    cost[ny][nx] = cost[y][x] + 1;
+	    q.push(make_pair(ny,nx));
+	}
+    }
+    
+    // rep(i,R) {
+    // 	rep(j,C) {
+    // 	    cout << cost[i][j] << "   ";
+    // 	}
+    // 	cout << endl;
+    // }
+
+    cout << cost[gy][gx] << endl;
+    
+    return 0;
 }
 

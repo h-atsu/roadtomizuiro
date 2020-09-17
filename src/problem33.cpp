@@ -25,8 +25,53 @@ int dx[] = {1,-1,0,0};
 int dy[] = {0,0,1,-1};
 
 
-int main(){
+vector<string> f(50);
+int dist[60][60];
 
-  return 0;
+int main(){
+    int H,W;
+    int cnt = 0;
+    cin >> H >> W;
+    rep(i,H) {
+	string s;
+	cin >> s;
+	f[i] = s;
+    }
+
+    rep(i,H) {
+	rep(j,W) {
+	    if(f[i][j] == '.') cnt++;
+	}
+    }
+    cnt -= 2;
+
+    queue<P> q;
+    f[0][0] = '#';
+    q.push(make_pair(0,0));
+    while(!q.empty()) {
+	int y = q.front().first;
+	int x = q.front().second;
+	q.pop();
+	rep(i,4) {
+	    int ny = y + dy[i];
+	    int nx = x + dx[i];
+	    if(ny >=0 && ny < H && nx >= 0 && nx < W && f[ny][nx] == '.' && dist[ny][nx] == 0) {
+		q.push(make_pair(ny,nx));
+		dist[ny][nx] = dist[y][x] + 1;
+	    }
+	}
+    }
+    // rep(i,H) {
+    // 	rep(j,W) cout << dist[i][j];
+    // 	cout << endl;
+    // }
+
+    if(dist[H-1][W-1] == 0) cout << -1 << endl;
+    else cout << cnt - dist[H-1][W-1] + 1 << endl;
+    
+
+    
+    
+    return 0;
 }
 
