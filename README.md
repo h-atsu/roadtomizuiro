@@ -34,8 +34,8 @@ diffは主観的難易度
 |**23**|C |　[JOI 2008 本選 3 - ダーツ](https://atcoder.jp/contests/joi2008ho/tasks/joi2008ho_c)|
 |**24**|B |　[ALDS_11_B - 深さ優先探索](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_11_B)|
 |**25**|A |　[AOJ 1160 - 島はいくつある？](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1160&lang=jp)|
-|**26**| |　[AtCoder Beginner Contest 138 D - Ki](https://atcoder.jp/contests/abc138/tasks/abc138_d)|
-|**27**| |　[JOI 2009 予選 4 - 薄氷渡り](https://atcoder.jp/contests/joi2009yo/tasks/joi2009yo_d)|
+|**26**|C |　[AtCoder Beginner Contest 138 D - Ki](https://atcoder.jp/contests/abc138/tasks/abc138_d)|
+|**27**|A |　[JOI 2009 予選 4 - 薄氷渡り](https://atcoder.jp/contests/joi2009yo/tasks/joi2009yo_d)|
 |**28**| |　[ALDS_11_C - 幅優先探索](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_11_C&lang=ja)|
 |**29**|A |　[AtCoder Beginner Contest 007 C - 幅優先探索](https://atcoder.jp/contests/abc007/tasks/abc007_3)|
 |**30**| |　[JOI 2011 予選 5 - チーズ](https://atcoder.jp/contests/joi2011yo/tasks/joi2011yo_e)|

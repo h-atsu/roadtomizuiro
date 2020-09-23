@@ -24,29 +24,50 @@ const double PI=3.14159265358979323846;
 int dx[] = {1,-1,0,0};
 int dy[] = {0,0,1,-1};
 
-int cans(bool f){
-    if(f) cout << "Yes" << endl;
-    else cout << "No" << endl;
-    return 0;
+
+using Graph = vector<vector<int>>;
+
+
+Graph G(1000010);
+vector<int> val(1000010);
+
+void dfs(int nord, int p = -1) {
+//    cout << nord << endl;
+    for(auto itr : G[nord]) {
+	if(itr == p) continue;
+	val[itr] += val[nord];
+	dfs(itr,nord); 
+    }
 }
 
 
 int main(){
-    int a[3],b[3],c[3];
-    rep(i,3) {
-	cin >> a[i] >> b[i] >> c[i];
+    int N,Q;
+    cin >> N >> Q;
+    G.resize(N);
+    val.resize(N);
+    rep(i,N-1) {
+	int a,b;
+	cin >> a >> b;
+	a--;b--;
+	G[a].push_back(b);
+	G[b].push_back(a);
+    }
+    rep(i,Q) {
+	int p,x;
+	cin >> p >> x;
+	p--;
+	val[p] += x;
     }
 
 
-    bool f = false;
-    for(int i=1; i<3; i++) {
-	for(int h1=-100; h1<=100; h1++) {
-	    for(int h2=-100; h2<=100; h2++) {
-		if(a[0] == b[0] + h1 && a[0] == c[0] + h2 && a[1] == b[1] + h1 && a[1] == c[1] + h2 && a[2] == b[2] + h1 && a[2] == c[2] + h2) f = true;
-	    }
-	}
+
+    dfs(0);
+
+    rep(i,N) {
+	cout << val[i] << " ";
     }
-    cans(f);
+    cout << endl;
     
     return 0;
 }
