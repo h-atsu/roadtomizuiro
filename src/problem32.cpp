@@ -26,7 +26,32 @@ int dy[] = {0,0,1,-1};
 
 
 int main(){
+    vector<string> tate(100);
+    vector<string> yoko(100);
+    rep(i,10) {
+	char c;
+	cin >> c;
+	tate[0].push_back(c);
+    }
 
-  return 0;
+    cout << tate[0] << endl;
+    
+    // int h,w;
+    // while(cin >> w >> h) {
+    // 	if(h==0 && w==0) break;
+      
+    // 	rep(i,2*h-1) {
+    // 	    if(i%2 == 0) {
+    // 		cin >> tate[i/2];
+    // 	    }
+    // 	    else cin >> yoko[i/2];
+    // 	}
+
+    // 	cout << tate[0] << endl;
+
+    // }
+
+    
+    return 0;
 }
 

@@ -24,9 +24,42 @@ const double PI=3.14159265358979323846;
 int dx[] = {1,-1,0,0};
 int dy[] = {0,0,1,-1};
 
+using Graph = vector<vector<int>>;
+
+Graph G(110);
+vector<int> dis(110,-1);
 
 int main(){
+    int N;
+    cin >> N;
+    G.resize(N);
+    dis.resize(N);
+    dis[0] = 0;
+    rep(i,N) {
+	int n,k;
+	cin >> n >> k;
+	rep(j,k) {
+	    int nx;
+	    cin >> nx;
+	    nx--;
+	    G[i].push_back(nx);
+	}
+    }
+    
+    queue<int> q;
+    q.push(0);
+    while(!q.empty()) {
+	int nord = q.front();
+	q.pop();
+	for(auto nx : G[nord]) {
+	    if(dis[nx] != -1) continue;
+	    dis[nx] = dis[nord] + 1;
+	    q.push(nx);
+	}
+    }
 
-  return 0;
+    rep(i,N) cout << i+1 << " " <<  dis[i] << endl;
+    
+    return 0;
 }
 
