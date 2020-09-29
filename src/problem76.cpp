@@ -26,7 +26,26 @@ int dy[] = {0,0,1,-1};
 
 
 int main(){
+    int N;
+    cin >> N;
+    ll A[N];
+    ll cum[N+1];
+    cum[0] = 0;
+    rep(i,N) {
+	cin >> A[i];
+	cum[i+1] = cum[i] + A[i];
+    }
 
-  return 0;
+    rep(i,N) {
+	int s = i+1;
+	ll ans = 0;
+	for(int j = 0; j+s <= N; j++) {
+	    ans = max(ans,cum[j+s] - cum[j]);
+	}
+	cout << ans << endl;
+    }
+    
+    
+    return 0;
 }
 
