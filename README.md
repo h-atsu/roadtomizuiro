@@ -90,7 +90,7 @@ diffは主観的難易度
 | **79**  | C    | [AtCoder Beginner Contest 106 D - AtCoder Express 2](https://atcoder.jp/contests/abc106/tasks/abc106_d)                               |
 | **80**  | A    | [GigaCode 2019 D - 家の建設](https://atcoder.jp/contests/gigacode-2019/tasks/gigacode_2019_d)                                         |
 | **81**  | A    | [AtCoder Beginner Contest 014 C - AtColor](https://atcoder.jp/contests/abc014/tasks/abc014_3)                                         |
-| **82**  |      | [AOJ 2013 - 大崎](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2013)                                                      |
+| **82**  | A    | [AOJ 2013 - 大崎](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2013)                                                      |
 | **83**  |      | [JOI 2015 本選 1 - 鉄道運賃](https://atcoder.jp/contests/joi2015ho/tasks/joi2015ho_a)                                                 |
 | **84**  |      | [JOI 2012 本選 4 - 釘](https://atcoder.jp/contests/joi2012ho/tasks/joi2012ho4)                                                        |
 | **85**  |      | [DSL_1_A - 互いに素な集合](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A&lang=ja)                                  |
