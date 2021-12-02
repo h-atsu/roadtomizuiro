@@ -29,8 +29,23 @@ int dy[] = {0,0,1,-1};
 int main(){
     int n;
     cin >> n;
-    
-    
+    vector<int> table(1000010);
+    rep(i,n) {
+	int a,b;	
+	cin >> a >> b;
+	table[a]++;
+	table[b+1]--;
+    }
+    int ans = 0;
+    rep(i,1000010) {
+	if(i == 0) continue;
+	table[i] += table[i-1];
+    }
+
+    rep(i,1000010) {
+	ans = max(ans, table[i]);
+    }
+    cout << ans << endl;
     
     return 0;
 }

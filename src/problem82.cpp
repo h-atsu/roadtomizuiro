@@ -26,7 +26,27 @@ int dy[] = {0,0,1,-1};
 
 
 int main(){
-
-  return 0;
+    int N;
+//    cout << 3600*24 + 60*59 + 60 << endl;
+    while(cin >> N) {
+	if(N == 0) break;
+	int Max = 90010;
+	vector<int> table(Max);
+	rep(i,N) {
+	    string a,b;
+	    cin >> a >> b;
+	    int s = stoi(a.substr(0,2))*3600 + stoi(a.substr(3,2))*60 + stoi(a.substr(6,2));
+	    int g = stoi(b.substr(0,2))*3600 + stoi(b.substr(3,2))*60 + stoi(b.substr(6,2));
+	    table[s]++;
+	    table[g]--;
+	}
+	int ans = 0;
+	rep(i,Max-1) {
+	    if(i==0) continue;
+	    table[i] += table[i-1];
+	    ans = max(ans, table[i]);
+	}
+	cout << ans << endl;
+    }
 }
 

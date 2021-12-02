@@ -26,7 +26,13 @@ int dy[] = {0,0,1,-1};
 
 
 int main(){
-
+    string s;
+    int i;
+    cin >> s;
+    cin >> i;
+    i--;
+    // cout << s[i] << endl;
+	      
   return 0;
 }
 

@@ -26,7 +26,41 @@ int dy[] = {0,0,1,-1};
 
 
 int main(){
-
-  return 0;
+    int N,M;
+    cin >> N >> M;
+    vector<int> P(M);
+    rep(i,M) {
+	int p;
+	cin >> p;
+	p--;
+	P[i] = p;
+    }
+    vector<ll> A(N-1);
+    vector<ll> B(N-1);
+    vector<ll> C(N-1);    
+    rep(i,N-1) {
+	cin >> A[i] >> B[i] >> C[i];
+    }
+    vector<ll> table(N);
+    rep(i,M-1) {
+	int s = min(P[i], P[i+1]);
+	int g = max(P[i], P[i+1]);
+//	cout << s << g << endl;
+	table[s]++;
+	table[g]--;
+    }
+    rep(i,N) {
+	if(i == 0) continue;
+	table[i] += table[i-1];
+    }
+    ll ans = 0;
+    rep(i,N) {
+	// その線路を利用する回数
+	ll cnt = table[i];
+	ll fare = min(C[i] + cnt*B[i], A[i]*cnt);
+	ans += fare;
+    }
+    cout << ans << endl;
+    
 }
 
