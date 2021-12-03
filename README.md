@@ -92,7 +92,7 @@ diffは主観的難易度
 | **81**  | A    | [AtCoder Beginner Contest 014 C - AtColor](https://atcoder.jp/contests/abc014/tasks/abc014_3)                                         |
 | **82**  | A    | [AOJ 2013 - 大崎](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2013)                                                      |
 | **83**  | A    | [JOI 2015 本選 1 - 鉄道運賃](https://atcoder.jp/contests/joi2015ho/tasks/joi2015ho_a)                                                 |
-| **84**  |      | [JOI 2012 本選 4 - 釘](https://atcoder.jp/contests/joi2012ho/tasks/joi2012ho4)                                                        |
+| **84**  | C    | [JOI 2012 本選 4 - 釘](https://atcoder.jp/contests/joi2012ho/tasks/joi2012ho4)                                                        |
 | **85**  |      | [DSL_1_A - 互いに素な集合](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A&lang=ja)                                  |
 | **86**  |      | [AtCoder Beginner Contest 075 C - Bridge](https://atcoder.jp/contests/abc075/tasks/abc075_c?lang=ja)                                  |
 | **87**  |      | [AtCoder Beginner Contest 120 D - Decayed Bridge](https://atcoder.jp/contests/abc120/tasks/abc120_d)                                  |
