@@ -43,9 +43,9 @@ diffは主観的難易度
 | **32**  |      | [AOJ 1166 - 迷図と命ず](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1166&lang=jp)                                        |
 | **33**  | A    | [AtCoder Beginner Contest 088 D - Grid Repainting](https://atcoder.jp/contests/abc088/tasks/abc088_d)                                 |
 | **34**  | A    | [ALDS_10_A - フィボナッチ数](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_10_A&lang=ja)                             |
-| **35**  |      | [DPL_1_B - 0,1ナップザック問題](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_1_B&lang=ja)                             |
-| **36**  |      | [DPL_1_C - ナップザック問題](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_1_C&lang=ja)                                |
-| **37**  |      | [DPL_1_A - コイン問題](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_1_A&lang=ja)                                      |
+| **35**  | A    | [DPL_1_B - 0,1ナップザック問題](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_1_B&lang=ja)                             |
+| **36**  | B    | [DPL_1_C - ナップザック問題](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_1_C&lang=ja)                                |
+| **37**  | A    | [DPL_1_A - コイン問題](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_1_A&lang=ja)                                      |
 | **38**  |      | [ALDS_10_C - 最長共通部分列](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_10_C&lang=ja)                             |
 | **39**  |      | [JOI 2011 予選 4 - 1 年生](https://atcoder.jp/contests/joi2011yo/tasks/joi2011yo_d)                                                   |
 | **40**  |      | [JOI 2012 予選 4 - パスタ](https://atcoder.jp/contests/joi2012yo/tasks/joi2012yo_d)                                                   |
