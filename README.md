@@ -99,8 +99,8 @@ diffは主観的難易度
 | **88**  | B    | [JOI 2008 本選 1 - 碁石ならべ](https://atcoder.jp/contests/joi2008ho/tasks/joi2008ho_a)                                               |
 | **89**  | A    | [JOI 2013 本選 1 - 電飾](https://atcoder.jp/contests/joi2013ho/tasks/joi2013ho1)                                                      |
 | **90**  | A    | [Square869120Contest #5 B - Emblem](https://atcoder.jp/contests/s8pc-5/tasks/s8pc_5_b)                                                |
-| **91**  |      | [AtCoder Beginner Contest 144 D - Water Bottle](https://atcoder.jp/contests/abc144/tasks/abc144_d)                                    |
-| **92**  |      | [AOJ 1193 - 連鎖消滅パズル](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1193&lang=jp)                                    |
+| **91**  | A    | [AtCoder Beginner Contest 144 D - Water Bottle](https://atcoder.jp/contests/abc144/tasks/abc144_d)                                    |
+| **92**  | B    | [AOJ 1193 - 連鎖消滅パズル](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1193&lang=jp)                                    |
 | **93**  |      | [Square869120Contest #3 B - 石落としゲーム](https://atcoder.jp/contests/s8pc-3/tasks/s8pc_3_b)                                        |
 | **94**  |      | [AOJ 1149 - ケーキカット](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1149&lang=jp)                                      |
 | **95**  |      | [AtCoder Beginner Contest 149 B - Greedy Takahashi](https://atcoder.jp/contests/abc149/tasks/abc149_b)                                |
