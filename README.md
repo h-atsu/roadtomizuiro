@@ -103,8 +103,8 @@ diffは主観的難易度
 | **92**  | B    | [AOJ 1193 - 連鎖消滅パズル](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1193&lang=jp)                                    |
 | **93**  |      | [Square869120Contest #3 B - 石落としゲーム](https://atcoder.jp/contests/s8pc-3/tasks/s8pc_3_b)                                        |
 | **94**  |      | [AOJ 1149 - ケーキカット](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1149&lang=jp)                                      |
-| **95**  |      | [AtCoder Beginner Contest 149 B - Greedy Takahashi](https://atcoder.jp/contests/abc149/tasks/abc149_b)                                |
-| **96**  |      | [AtCoder Beginner Contest 139 D - ModSum](https://atcoder.jp/contests/abc139/tasks/abc139_d)                                          |
+| **95**  | A    | [AtCoder Beginner Contest 149 B - Greedy Takahashi](https://atcoder.jp/contests/abc149/tasks/abc149_b)                                |
+| **96**  | A    | [AtCoder Beginner Contest 139 D - ModSum](https://atcoder.jp/contests/abc139/tasks/abc139_d)                                          |
 | **97**  |      | [AtCoder Beginner Contest 150 D - Semi Common Multiple](https://atcoder.jp/contests/abc150/tasks/abc150_d)                            |
 | **98**  |      | [三井住友信託銀行プログラミングコンテスト2019 予選 E - Colorful Hats 2](https://atcoder.jp/contests/sumitrust2019/tasks/sumitb2019_e) |
 | **99**  |      | [DDCC2020 予選 D - Digit Sum Replace](https://atcoder.jp/contests/ddcc2020-qual/tasks/ddcc2020_qual_d)                                |
